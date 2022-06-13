@@ -1,10 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Education from '../components/Education';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div className={styles.container}>
       <Head>

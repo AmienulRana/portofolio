@@ -1,11 +1,11 @@
-import styles from '../styles/Education.module.scss';
+import styles from '../styles/home.module.scss';
 import { MdOutlineWork } from 'react-icons/md';
 function Education() {
   return (
     <div className={[styles.Education, 'WrapperContent'].join(' ')}>
         <h1>Experience</h1>
-        <hr />
-        <div className={styles.WrapperHistory}>
+        <hr/>
+        <div className={styles.WrapperHistory} data-aos="fade-up" data-aos-duration="300">
             <div className={styles.FirstContent}>
                 <div className={styles.Year}>
                     <h4></h4>
