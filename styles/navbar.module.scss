@@ -1,0 +1,13 @@
+@import './variable.scss';
+.Navbar{
+    background: $main-color;
+    width:100%;
+    padding:20px $padding-content;
+    border-bottom:2px solid rgb(102, 102, 102);
+    h2{
+        font-weight: normal; letter-spacing: 1px;
+    }
+    h4{
+        margin:0; font-size:22px;
+    }
+}

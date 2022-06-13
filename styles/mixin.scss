@@ -1,0 +1,25 @@
+// ini adalah mixin yang di pakai secara global
+@mixin justify-align($justify, $align: null) {
+    display:flex;
+    justify-content:$justify;
+    align-items:$align;
+}
+@mixin width-height($width, $height){
+    width:$width;
+    height:$height;
+}
+@mixin absolute-top-left($top: 0, $left: 0){
+    position:absolute;
+    top:$top;
+    left:$left;
+}
+@mixin absolute-top-right($top: 0, $right: 0){
+    position:absolute;
+    top:$top;
+    right:$right;
+}
+@mixin absolute-bottom-left($bottom: 0, $left: 0){
+    position:absolute;
+    bottom:$bottom;
+    left:$left;
+}
