@@ -23,7 +23,7 @@ function Education() {
                     <ul>
                         <li>Work as a team or individually</li>
                         <li>Creating a QrCode-based digital invitation website as a final project</li>
-                        <li>Learned Technologies that I didn't understand like ReactJs, ExpressJs, NodeJs, MongoDB, and Redux</li>
+                        <li>Learned Technologies that I didn&apos;t understand like ReactJs, ExpressJs, NodeJs, MongoDB, and Redux</li>
                     </ul>
                 </div>
             </div>

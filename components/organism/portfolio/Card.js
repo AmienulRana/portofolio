@@ -26,11 +26,11 @@ function Card({image, title, tech, animation}) {
   return (
     <>
         <figure>
-            <Image src={image} placeholder="blur" width={300} height={200} data-aos="fade-up" data-aos-duration={animation} />
+            <Image src={image} placeholder="blur" width={300} height={200} data-aos="fade-up" data-aos-duration={animation} alt={title}/>
             <figcaption>{title}</figcaption>
         </figure>
         <div className={styles.Tech}>
-            {RenderTech.map(Item => <Item />)}
+            {RenderTech.map((Item, i) => <Item  key={i} />)}
         </div>
     </>
   )
