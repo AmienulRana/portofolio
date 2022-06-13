@@ -1,0 +1,68 @@
+@import './variable.scss';
+@import './mixin.scss';
+.Navbar{
+    background: $main-color;
+    width:100%;
+    padding:20px $padding-content;
+    border-bottom:2px solid rgb(102, 102, 102);
+    h2{
+        font-weight: normal; letter-spacing: 1px;
+    }
+    h4{
+        margin:0; font-size:22px;
+    }
+}
+.Banner{
+    .Medsos{
+        display:flex;
+        svg{
+            @include width-height(50px, 50px);
+            border:3px solid $secondary-color;
+            padding:5px;
+            border-radius: 50%;
+            margin-right:15px;
+        }
+    }
+    h2{font-weight: normal; letter-spacing: 1px; width: 70%;}
+    p{width:80%;}
+}
+.Education{
+    h1{ text-align: center;}
+    h3{ color:$secondary-color; margin:0;}
+    .FirstContent{
+        @include justify-align(Center);
+        @include width-height(100%, 70px);
+        svg{
+            @include absolute-top-left(-10px, -20px);
+            z-index:1;
+            @include width-height(40px,40px);
+            border-radius:50%;
+            background-color: $secondary-color;
+            padding: 5px;
+        }
+    }
+    .History{
+        @include justify-align(Center);
+        width:100%;
+    }
+}
+.Year{
+    width: 30%;
+    h3{ text-align: right; padding-right: 20px;}
+}
+.Content{
+    border-left: 3px solid $secondary-color;
+    padding-left: 15px;
+    position: relative;
+    width: 50%;
+    &::after{
+       content: '';
+       @include absolute-top-left(0, -7px);
+       @include width-height(12px, 12px);
+       background: $secondary-color;
+       border-radius:50%;
+    }
+    li{
+        margin-bottom: 12px;
+    }
+}
