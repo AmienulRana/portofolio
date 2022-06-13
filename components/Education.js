@@ -16,7 +16,7 @@ function Education() {
             </div>
             <div className={styles.History}>
                 <div className={styles.Year}>
-                    <h3>july- oktober 2021</h3>
+                    <h3>july - oktober 2021</h3>
                 </div>
                 <div className={styles.Content}>
                     <h3>Internship as full stack developer | DILo Medan</h3>
