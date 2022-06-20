@@ -89,6 +89,7 @@
         opacity: 0;
         transition:.4s ease-in-out;
         @include justify-align(center, center);
+        flex-wrap: wrap;
         svg{ font-size: 38px; color: $secondary-color;}
     }
 }

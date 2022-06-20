@@ -3,6 +3,7 @@ import styles from '../styles/home.module.scss';
 import HefaStore from '../assets/hefa store.png';
 import LandingPage from '../assets/landing page.png';
 import LandingPageProperty from '../assets/landing page property.png';
+import InvitationsDigital from '../assets/undangan digital.png';
 import Card from './organism/portfolio/Card';
 export default function Portfolio() {
   return (
@@ -19,6 +20,9 @@ export default function Portfolio() {
             </div>
             <div className={styles.WrapperImg}>
                 <Card animation="500" image={LandingPageProperty} title="landing page property" tech={['html', 'css', 'js','tailwind']}/>
+            </div>
+            <div className={styles.WrapperImg}>
+                <Card animation="500" image={InvitationsDigital} title="undangan berbasis QrCode" tech={['css', 'react','mongodb', 'express', 'node']}/>
             </div>
         </div>
     </div>
