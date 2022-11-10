@@ -34,8 +34,8 @@
         @include width-height(100%, 70px);
         svg{
             @include absolute-top-left(-10px, -20px);
-            z-index:1;
             @include width-height(40px,40px);
+            z-index:1;
             border-radius:50%;
             background-color: $secondary-color;
             padding: 5px;
@@ -99,6 +99,8 @@
     svg{ 
         @include width-height(48px, 48px); margin-right: 20px; transition:.3s;
         &:hover{color: $secondary-color; transition: .3s;}
+        margin-bottom: 10px;
+
     }
     .Frontend,.Backend,.NextLearn,.Tools{ 
         width: 50%; 
