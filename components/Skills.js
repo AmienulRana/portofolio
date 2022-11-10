@@ -17,6 +17,9 @@ export default function Skills() {
             <Tech.react />
             <Tech.redux />
             <Tech.next />
+            <Tech.vuejs />
+            <Tech.typesript />
+            <Tech.sass />
           </div>
         </div>
         <div className={styles.Backend}>
