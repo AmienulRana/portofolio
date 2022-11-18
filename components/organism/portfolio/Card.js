@@ -58,7 +58,7 @@ function Card({ image, title, tech, animation, link }) {
           />
         <figcaption>{title}</figcaption>
       </figure>
-      <a href={link} target="_blank" className={styles.Tech}>
+      <a href={link} target="_blank" className={styles.Tech} rel="noreferrer">
         <div>
           {RenderTech.map((Item, i) => (
             <Item key={i} />
