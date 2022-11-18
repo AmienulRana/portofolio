@@ -1,140 +1,244 @@
 @import './variable.scss';
 @import './mixin.scss';
-.Navbar{
+
+.Navbar {
     background: $main-color;
-    width:100%;
-    padding:20px $padding-content;
-    border-bottom:2px solid rgb(102, 102, 102);
-    h2{
-        font-weight: normal; letter-spacing: 1px;
+    width: 100%;
+    padding: 20px $padding-content;
+    border-bottom: 2px solid rgb(102, 102, 102);
+
+    h2 {
+        font-weight: normal;
+        letter-spacing: 1px;
     }
-    h4{
-        margin:0; font-size:22px;
+
+    h4 {
+        margin: 0;
+        font-size: 22px;
     }
 }
-.Banner{
-    .Medsos{
-        display:flex;
-        svg{
+
+.Banner {
+    .Medsos {
+        display: flex;
+
+        svg {
             @include width-height(50px, 50px);
-            border:3px solid $secondary-color;
-            padding:5px;
+            border: 3px solid $secondary-color;
+            padding: 5px;
             border-radius: 50%;
-            margin-right:15px;
+            margin-right: 15px;
         }
     }
-    h2{font-weight: normal; letter-spacing: 1px; width: 70%;}
-    p{width:80%;}
+
+    h2 {
+        font-weight: normal;
+        letter-spacing: 1px;
+        width: 70%;
+    }
+
+    p {
+        width: 80%;
+    }
 }
-.Education{
-    h1{ text-align: center;}
-    h3{ color:$secondary-color; margin:0;}
-    .FirstContent{
+
+.Education {
+    h1 {
+        text-align: center;
+    }
+
+    h3 {
+        color: $secondary-color;
+        margin: 0;
+    }
+
+    .FirstContent {
         @include justify-align(Center);
         @include width-height(100%, 70px);
-        svg{
+
+        svg {
             @include absolute-top-left(-10px, -20px);
-            @include width-height(40px,40px);
-            z-index:1;
-            border-radius:50%;
+            @include width-height(40px, 40px);
+            z-index: 1;
+            border-radius: 50%;
             background-color: $secondary-color;
             padding: 5px;
         }
     }
-    .History{
+
+    .History {
         @include justify-align(Center);
-        width:100%;
+        width: 100%;
     }
 }
-.Year{
+
+.Year {
     width: 30%;
-    h3{ text-align: right; padding-right: 20px;}
+
+    h3 {
+        text-align: right;
+        padding-right: 20px;
+    }
 }
-.Content{
+
+.Content {
     border-left: 3px solid $secondary-color;
     padding-left: 15px;
     position: relative;
     width: 50%;
-    &::after{
-       content: '';
-       @include absolute-top-left(0, -7px);
-       @include width-height(12px, 12px);
-       background: $secondary-color;
-       border-radius:50%;
+
+    &::after {
+        content: '';
+        @include absolute-top-left(0, -7px);
+        @include width-height(12px, 12px);
+        background: $secondary-color;
+        border-radius: 50%;
     }
-    li{
+
+    li {
         margin-bottom: 12px;
     }
 }
-.Portfolio{
-    h1, p{ text-align: center;}
-    p{margin:0}
-    .WrapperImg{
-        position:relative;
+
+.Portfolio {
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    p {
+        margin: 0
+    }
+
+    .WrapperImg {
+        position: relative;
         @include width-height(23%, 100%);
         cursor: pointer;
         overflow: hidden;
         margin: 0 2% 50px 0;
-        &:hover > .Tech{
-            top:0 !important;
+
+        &:hover>.Tech {
+            top: 0 !important;
             opacity: 1 !important;
             transition: .4s ease-in-out !important;
         }
     }
-    .Tech{
-        @include absolute-top-left(100%,0);
+
+    .Tech {
+        @include absolute-top-left(100%, 0);
         bottom: 0;
         right: 0;
         background: rgba(24, 20, 50, .8);
         opacity: 0;
-        transition:.4s ease-in-out;
+        transition: .4s ease-in-out;
         @include justify-align(center, center);
         flex-wrap: wrap;
-        svg{ font-size: 38px; color: $secondary-color;}
+
+        svg {
+            font-size: 38px;
+            color: $secondary-color;
+        }
     }
 }
-.Skill{
+
+.Skill {
     @include justify-align(space-between, center);
     flex-wrap: wrap;
-    svg{ 
-        @include width-height(48px, 48px); margin-right: 20px; transition:.3s;
-        &:hover{color: $secondary-color; transition: .3s;}
+
+    svg {
+        @include width-height(48px, 48px);
+        margin-right: 20px;
+        transition: .3s;
+
+        &:hover {
+            color: $secondary-color;
+            transition: .3s;
+        }
+
         margin-bottom: 10px;
 
     }
-    .Frontend,.Backend,.NextLearn,.Tools{ 
-        width: 50%; 
+
+    .Frontend,
+    .Backend,
+    .NextLearn,
+    .Tools {
+        width: 50%;
         box-shadow: 2px 3px 10px rgba(24, 20, 50, .8);
         margin-bottom: 70px;
-        h2{ text-align: center;}
-        .Skills{
+
+        h2 {
+            text-align: center;
+        }
+
+        .Skills {
             @include justify-align(center, center);
             flex-wrap: wrap;
-        }   
-    }
-    .NextLearn{
-        svg{
-            color: rgb(90, 90, 90);
-            &:hover{color:white !important}
         }
-        p{text-align:center}
+    }
+
+    .NextLearn {
+        svg {
+            color: rgb(90, 90, 90);
+
+            &:hover {
+                color: white !important
+            }
+        }
+
+        p {
+            text-align: center
+        }
     }
 }
+
 @media (max-width: 767.98px) {
-    .Navbar{padding:10px 30px}
-    .Banner{h2{width: 100%;}}
-    .Year{width: 35%; h3{text-align: start; padding:0;}}
-    .Content{
-        width: 65%;
-        ul{padding-left:15px;}
+    .Navbar {
+        padding: 10px 30px
     }
-    .WrapperImg{width: 48% !important;}
-    .Skill{
+
+    .Banner {
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .Year {
+        width: 35%;
+
+        h3 {
+            text-align: start;
+            padding: 0;
+        }
+    }
+
+    .Content {
+        width: 65%;
+
+        ul {
+            padding-left: 15px;
+        }
+    }
+
+    .WrapperImg {
+        width: 48% !important;
+    }
+
+    .Skill {
         justify-content: center !important;
-        .Frontend,.Backend,.NextLearn,.Tools{ 
-            width: 90%; 
+
+        .Frontend,
+        .Backend,
+        .NextLearn,
+        .Tools {
+            width: 90%;
             margin-bottom: 40px !important;
         }
-        svg{@include width-height(38px, 38px); margin-bottom:10px}
+
+        svg {
+            @include width-height(38px, 38px);
+            margin-bottom: 10px
+        }
     }
 }

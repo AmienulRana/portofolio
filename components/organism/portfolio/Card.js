@@ -42,27 +42,30 @@ export const Tech = {
   sass: DiSass,
   webpack: SiWebpack,
 };
-function Card({ image, title, tech, animation }) {
+function Card({ image, title, tech, animation, link }) {
   const RenderTech = tech.map((item) => Tech[item]);
   return (
     <>
       <figure>
-        <Image
-          src={image}
-          placeholder="blur"
-          width={300}
-          height={200}
-          data-aos="fade-up"
-          data-aos-duration={animation}
-          alt={title}
-        />
+          <Image
+            src={image}
+            placeholder="blur"
+            width={300}
+            height={200}
+            data-aos="fade-up"
+            data-aos-duration={animation}
+            alt={title}
+          />
         <figcaption>{title}</figcaption>
       </figure>
-      <div className={styles.Tech}>
-        {RenderTech.map((Item, i) => (
-          <Item key={i} />
-        ))}
-      </div>
+      <a href={link} target="_blank" className={styles.Tech}>
+        <div>
+          {RenderTech.map((Item, i) => (
+            <Item key={i} />
+          ))}
+        </div>
+      </a>
+
     </>
   );
 }

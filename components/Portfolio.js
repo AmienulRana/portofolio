@@ -8,42 +8,50 @@ import TopupGame from '../assets/topupgame.png';
 import Card from './organism/portfolio/Card';
 import Marketplace from '../assets/marketplace.jpg';
 
-export const Portfolio = [
+export const portfolios = [
     {
         animation: '300',
         image: HefaStore,
         title: "Online shop(static)",
-        tech: ['html','css', 'js']
+        tech: ['html','css', 'js'],
+        link: 'https://amienulrana.github.io/hefa-store'
     },
     {
         animation: '300',
         image: LandingPage,
         title: "Landing page healty food",
-        tech: ['html','css', 'js', 'bs']
+        tech: ['html','css', 'js', 'bs'],
+        link: 'https://amienulrana.github.io/healthysalads'
+
     },
     {
         animation: '500',
         image: LandingPageProperty,
         title: "Landing page property",
-        tech: ['html','css', 'js', 'tailwind']
+        tech: ['html','css', 'js', 'tailwind'],
+        link: 'https://amienulrana.github.io/companyprofile'
+
     },
     {
         animation: '500',
         image: InvitationsDigital,
         title: "Undangan berbasis QrCode",
-        tech: ['react','css', 'mongodb', 'express', 'node']
+        tech: ['react','css', 'mongodb', 'express', 'node'],
+        link: false
     },
     {
         animation: '700',
         image: TopupGame,
         title: "Website topup game",
-        tech: ['next','css', 'typesript', 'mongodb', 'express']
+        tech: ['next','css', 'typesript', 'mongodb', 'express'],
+        link: 'https://topupgame-pearl.vercel.app/'
     },
     {
         animation: '300',
-        image: HefaStore,
+        image: Marketplace,
         title: "Marketplace",
-        tech: ['vuejs', 'tailwind', 'mongodb', 'express', 'node']
+        tech: ['vuejs', 'tailwind', 'mongodb', 'express', 'node'],
+        link: 'https://marketplace-one-blue.vercel.app/'
     },
 ]
 
@@ -54,9 +62,17 @@ export default function Portfolio() {
         <p>here are the best projects that I can show you</p>
         <hr />
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
-            <div className={styles.WrapperImg}>
-                <Card animation="700" image={Marketplace} title="" tech={[]}/>
-            </div>
+            {portfolios.map((portfolio, i) => (
+                <div className={styles.WrapperImg} key={i}>
+                    <Card 
+                        link={portfolio.link ? portfolio.link : '/#'} 
+                        animation={portfolio.animation}
+                        image={portfolio.image} 
+                        title={portfolio.title} 
+                        tech={portfolio.tech} 
+                    />
+                </div>
+            ))}
         </div>
     </div>
   )
