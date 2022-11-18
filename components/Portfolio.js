@@ -8,6 +8,45 @@ import TopupGame from '../assets/topupgame.png';
 import Card from './organism/portfolio/Card';
 import Marketplace from '../assets/marketplace.jpg';
 
+export const Portfolio = [
+    {
+        animation: '300',
+        image: HefaStore,
+        title: "Online shop(static)",
+        tech: ['html','css', 'js']
+    },
+    {
+        animation: '300',
+        image: LandingPage,
+        title: "Landing page healty food",
+        tech: ['html','css', 'js', 'bs']
+    },
+    {
+        animation: '500',
+        image: LandingPageProperty,
+        title: "Landing page property",
+        tech: ['html','css', 'js', 'tailwind']
+    },
+    {
+        animation: '500',
+        image: InvitationsDigital,
+        title: "Undangan berbasis QrCode",
+        tech: ['react','css', 'mongodb', 'express', 'node']
+    },
+    {
+        animation: '700',
+        image: TopupGame,
+        title: "Website topup game",
+        tech: ['next','css', 'typesript', 'mongodb', 'express']
+    },
+    {
+        animation: '300',
+        image: HefaStore,
+        title: "Marketplace",
+        tech: ['vuejs', 'tailwind', 'mongodb', 'express', 'node']
+    },
+]
+
 export default function Portfolio() {
   return (
     <div className={[styles.Portfolio, 'WrapperContent'].join(' ')}>
@@ -16,22 +55,7 @@ export default function Portfolio() {
         <hr />
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
             <div className={styles.WrapperImg}>
-                <Card animation="300" image={HefaStore} title="Online shop(static)" tech={['html', 'css', 'bs']}/>
-            </div>
-            <div className={styles.WrapperImg}>
-                <Card animation="300" image={LandingPage} title="Landing page healty food" tech={['html', 'css', 'js','bs']}/>
-            </div>
-            <div className={styles.WrapperImg}>
-                <Card animation="500" image={LandingPageProperty} title="Landing page property" tech={['html', 'css', 'js','tailwind']}/>
-            </div>
-            <div className={styles.WrapperImg}>
-                <Card animation="500" image={InvitationsDigital} title="Undangan berbasis QrCode" tech={['css', 'react','mongodb', 'express', 'node']}/>
-            </div>
-            <div className={styles.WrapperImg}>
-                <Card animation="700" image={TopupGame} title="Website topup game" tech={['css', 'typesript','mongodb', 'express', 'node']}/>
-            </div>
-            <div className={styles.WrapperImg}>
-                <Card animation="700" image={Marketplace} title="Marketplace" tech={['vuejs', 'tailwind', 'mongodb', 'express', 'node']}/>
+                <Card animation="700" image={Marketplace} title="" tech={[]}/>
             </div>
         </div>
     </div>
